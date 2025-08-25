@@ -23,7 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* --- IMPORTANT: DO NOT REMOVE THIS SCRIPT --- */}
+        <script
+          src="https://cdn.make.inc/preview-bridge/latest/bridge.js"
+          type="module"
+        ></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
